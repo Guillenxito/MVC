@@ -1,0 +1,11 @@
+<h1>Bienvenido <u><?= $data["perfil"];?></u></h1>
+
+<p>
+    <h1><?= $data["noticia"]->getTitulo() ."(".$data["noticia"]->getFecha().")"?></h1>
+    <h3><?= $data["noticia"]->getTexto();?></h3>
+</p>
+
+Publicidad:<br>
+<?= $data["publicidad"];?>
+<br>
+<a href="/noticia/list/">Volver</a>

@@ -1,0 +1,16 @@
+<h1>Mi lista</h1>
+<a href="/noticia/add/">Añadir noticia</a>
+<ul>
+<?php
+foreach ($data as $noticia) { ?>
+	<li>
+		<div>
+			<?= $noticia->getTitulo()?>
+			<a href="/noticia/show/<?= $noticia->getId()?>">(Ver mas</a>
+			<span> | </span>
+			<a href="/noticia/edit/<?= $noticia->getId()?>"> Edit)</a>
+		</div>
+	</li>
+<?php } ?>
+</ul>
+<a href="/usuario/salir/">Salir</a>

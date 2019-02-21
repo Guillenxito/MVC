@@ -1,0 +1,76 @@
+
+
+/noticias/listado/
+
+/noticias/listado/politica
+
+/noticias/listado/tecnologia/?pag=2
+
+
+
+###########
+Controlador
+
+
+            ######
+            Accion
+
+                    #########
+                    Parametro
+
+
+/noticias/listado/desde/2019-01-01/
+
+
+Para evitar el tener URL muy largas se crea la clase Router, como en Angular
+
+
+
+
+
+
+VISTA: MUETRA EL CONTENIDO AL USUARIO (DEBEN SER MUY MUY  SENCILLAS, PERO QUE MUCHO!)
+        -LAS VISTAS PUEDEN ESTAR EN RESOURCES POR QUE NO TIENEN POR QUE SER PARTE DEL PROYECTO, DE ESTA MANERA
+        SE PODRAN CAMBIAR POR OTROS TEMPLATES
+
+        -TAMBIEN SE PUEDEN METER EN SRC/VIEWS
+
+        -AUNQUE TAMBIEN PODRIAN IR EN PUBLIC ( NO ES LO COMUN )
+
+
+MODELO: PERSISTENCIA DE DATOS 
+
+CONTROLADOR: ELEMENTO QUE DIRIGE LAS ACCIONES
+
+
+EJERCICIOS CASA:
+-INTENTAR IMPLEMETAR LOS MODELOS CON LAS TECNOLOGIAS
+-EL MODELO BASE DEBE TENER UN ELEMENTO PROTEGIDO (INFO_LIST = [];)
+USAR _CALL
+***HACER UN NUEVO MODELO_NOTICIA CON _CALL PARA NO TENER QUE IMPLEMTAR SETTERS Y GETTERS***
+
+
+
+
+
+
+
+
+
+
+
+
+
+====== COMANDOS PARA INICIAR PHP INTERACTIVO ======
+
+php -a
+include('bin/shell_autoload.php');
+$n = new ModelNoticias("Trench","Chlorine","2019/02/12");
+Estando en /MVC
+        php -a
+        include('bin/shell_autoload.php');
+        $n = new ModelNew("Trench","Chlorine","2019/01/01");
+        $n->save();
+        print_r($n);
+        print_r($n->titulo);
+        print_r($n->info_list);
